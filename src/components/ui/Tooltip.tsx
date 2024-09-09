@@ -33,8 +33,21 @@ const Tooltip: React.FC<TooltipProps> = ({
     setIsVisible(false);
   };
 
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      triggerRef.current &&
+      !triggerRef.current.contains(event.target as Node) &&
+      tooltipRef.current &&
+      !tooltipRef.current.contains(event.target as Node)
+    ) {
+      hideTooltip();
+    }
+  };
+
   useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
     return () => {
+      document.removeEventListener("click", handleClickOutside);
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
@@ -119,6 +132,13 @@ const Tooltip: React.FC<TooltipProps> = ({
         ref={triggerRef}
         onMouseEnter={showTooltip}
         onMouseLeave={hideTooltip}
+        onClick={() => {
+          if (isVisible) {
+            hideTooltip();
+          } else {
+            showTooltip();
+          }
+        }}
       >
         {children}
       </div>
