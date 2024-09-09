@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "@/components/Providers";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -119,6 +120,7 @@ export default function RootLayout({
           <Analytics />
         </Providers>
       </body>
+      <GoogleAnalytics gaId="G-F7FRJKW5QH" />
     </html>
   );
 }
