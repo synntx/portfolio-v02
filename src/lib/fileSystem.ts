@@ -3,20 +3,25 @@ export const fileSystem = {
     home: {
       harsh: {
         projects: {
-          "react-app": {
+          "zync-pwa": {
             type: "file",
             content:
-              "React project files: A modern web application using React and Next.js",
+              "Zync (Video Streaming Progressive Web App):\nTech stack: Reactjs, Typescript, NodeJS, ExpressJS, PostgreSQL, Cloudinary, Docker, Prisma, Tanstack-query\n- Implemented an advanced, infinitely scalable nested comment system.\n- Developed advanced search functionality with filters for title, tags, and description.\n- Robust user authentication and authorization following best practices.\n- Added lazy loading and memoization for performance and optimization.\n- Implemented validation using Zod.",
           },
-          "node-api": {
+          "food-ordering-app": {
             type: "file",
             content:
-              "Node.js API project: RESTful API built with Express and MongoDB",
+              "Food-Ordering-App:\nTech stack: Reactjs, NodeJS, ExpressJS, MongoDB, Auth0\n- Implemented user authentication and authorization with Auth0.\n- Advanced food ordering app with search functionality and filters.\n- Utilizes Tanstack Query for efficient data caching.\n- Provides real-time order status updates.\n- Integrates Stripe for secure payment processing.\n- Uses React Hooks for effective form state management and validation (Zod & Express Validator).",
           },
-          "portfolio-site": {
+          "vibe-social-media-app": {
             type: "file",
             content:
-              "Personal portfolio website built with Next.js and Tailwind CSS",
+              "Vibe (Social Media App):\nTech stack: Reactjs, NodeJS, ExpressJS, MongoDB, Firebase\n- Social media web app with CRUD operations.\n- Developed profile page.\n- Implemented follow/unfollow system.\n- Implemented liking and comment functionality.\n- Authentication using JWT, Google OAuth, and GitHub Auth.",
+          },
+          "synapse-ai-assistant": {
+            type: "file",
+            content:
+              "Synapse - AI Assistant:\nTech stack: Nextjs, Gemini AI, Typescript, Langchain, Google Search API\n- A web search assistant that uses AI to provide relevant information and answers questions.\n- Using Google custom JSON search API for text and image search results and YouTube API for getting videos related to queries.\n- Used OpenWeather API for getting weather results and News API for getting news results.",
           },
           ".secret-project": {
             type: "file",
@@ -27,7 +32,8 @@ export const fileSystem = {
         documents: {
           "resume.pdf": {
             type: "file",
-            content: "Harsh Yadav's professional resume (PDF format)",
+            content:
+              "Harsh Yadav's professional resume (PDF format)\nEmail: harshdana1@gmail.com \nSkills:\n- Frameworks: React, NextJs, Express, Nodejs\n- Other Technologies: WebSockets, Redis, Stripe, Tanstack Query, React Hook Form, Auth0, Redux Toolkit\n- Databases: PostgreSQL, SQL, MongoDB\n- Development Tools: VSCode, Git, GitHub, Docker",
           },
           "blog-ideas.txt": {
             type: "file",
@@ -43,12 +49,12 @@ export const fileSystem = {
         "skills.txt": {
           type: "file",
           content:
-            "JavaScript, TypeScript, React, Next.js, Node.js, Express, MongoDB, Tailwind CSS, Git, GitHub, Vercel, AWS, Docker, GraphQL",
+            "Frameworks: React, NextJs, Express, Nodejs\nOther Technologies: WebSockets, Redis, Stripe, Tanstack Query, React Hook Form, Auth0, Redux Toolkit\nDatabases: PostgreSQL, SQL, MongoDB\nDevelopment Tools: VSCode, Git, GitHub, Docker",
         },
         "contact.txt": {
           type: "file",
           content:
-            "Email: harshyadav00000@gmail.com\nLinkedIn: https://www.linkedin.com/in/harshyadav/\nGitHub: https://github.com/harshyadavone/\nTwitter: @harshyadavdev",
+            "Email: harshdana1@gmail.com\nLinkedIn: https://www.linkedin.com/in/harshdana/\nGitHub: https://github.com/harshyadavone/\nTwitter: @harshyadavone",
         },
         "about-me.txt": {
           type: "file",
