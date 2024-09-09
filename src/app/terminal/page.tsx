@@ -30,7 +30,7 @@ export default function TerminalPage() {
         <>
           <button
             onClick={handleGoBack}
-            className="flex items-center gap-2 px-4 py-1 absolute left-4 top-4 md:left-8 md:top-8 border border-transparent  hover:border hover:border-border rounded-md text-foreground transistion-all duration-200 active:scale-95"
+            className="flex items-center gap-2 px-4 py-1 absolute left-4 top-4 md:left-8 md:top-8 border border-border md:border-transparent  hover:border hover:border-border rounded-md text-foreground transistion-all duration-200 active:scale-95"
           >
             <IoChevronBack className="text-lg" />
             <span className="hidden md:block">Go Back</span>
