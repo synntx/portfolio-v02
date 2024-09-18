@@ -59,9 +59,11 @@ harsh.connect();`;
               content="Open Interactive Terminal"
             >
               <Link href="/terminal" passHref>
-                <button className="px-3 py-1 text-xs font-semibold text-white bg-accent rounded-md transition-all duration-200 ease-in-out flex items-center space-x-1 hover:scale-[0.97] active:scale-[0.95]">
-                  <FaTerminal className="text-sm" />
-                  <span>Interactive</span>
+                <button className="px-3 py-1 text-xs font-semibold text-white bg-accent rounded-md transition-all duration-200 ease-in-out flex items-center space-x-1 active:scale-[0.95] group">
+                  <FaTerminal className="text-sm group-hover:translate-x-16 duration-300 transition-all" />
+                  <span className="group-hover:-translate-x-5 duration-300 transition-all">
+                    Interactive
+                  </span>
                 </button>
               </Link>
             </Tooltip>
