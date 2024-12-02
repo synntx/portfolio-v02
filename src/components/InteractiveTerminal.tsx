@@ -40,8 +40,8 @@ const InteractiveTerminal: React.FC = () => {
   };
 
   const commands = {
-    whoareyou: "Introduces the developer behind this digital playground",
-    whoami: "Describes your role as an explorer in the HarshOS universe",
+    whoareyou: "Introduces the developer",
+    whoami: "Describes your role as an explorer in the HarshOS",
     cd: "Change directory. Usage: cd <directory>",
     ls: "List contents of the current directory",
     cat: "Display contents of a file. Usage: cat <filename>",
@@ -52,9 +52,7 @@ const InteractiveTerminal: React.FC = () => {
     sudo: "Attempts to use superuser privileges",
     fact: "Shares a random interesting fact",
     fortune: "Provides a random fortune",
-    rickroll: "You know the rules, and so do I",
     hack: "Simulates a hacking attempt (just for fun!)",
-    sing: "Sings a little tune",
     help: "Displays this help message",
   };
 
@@ -93,12 +91,12 @@ const InteractiveTerminal: React.FC = () => {
         return (
           <pre>
             {`
-        _   _      _ _         __        __         _     _ _ 
+        _   _      _ _         __        __         _     _ _
        | | | | ___| | | ___    \\ \\      / /__  _ __| | __| | |
        | |_| |/ _ \\ | |/ _ \\    \\ \\ /\\ / / _ \\| '__| |/ _\` | |
        |  _  |  __/ | | (_) |    \\ V  V / (_) | |  | | (_| |_|
        |_| |_|\\___|_|_|\\___( )    \\_/\\_/ \\___/|_|  |_|\\__,_(_)
-                            |/                                   
+                            |/
             `}
           </pre>
         );
@@ -135,12 +133,8 @@ const InteractiveTerminal: React.FC = () => {
           "Your code will work on the first try. Yes, really!",
         ];
         return fortunes[Math.floor(Math.random() * fortunes.length)];
-      case "rickroll":
-        return "Never gonna give you up, never gonna let you down...";
       case "hack":
         return "Accessing secure server...\nBypassing firewall...\nDownloading confidential files...\nJust kidding! 😂";
-      case "sing":
-        return "🎶 Twinkle, twinkle, little star, how I wonder what you are... 🎶";
       default:
         return "Command not found. Type 'help' for a list of available commands.";
     }
