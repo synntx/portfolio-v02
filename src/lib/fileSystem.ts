@@ -26,24 +26,19 @@ export const fileSystem = {
           ".secret-project": {
             type: "file",
             content:
-              "🕵️ You've found a secret project! It's a time machine built with JavaScript. Don't tell anyone!",
+              "🕵️ You've found a secret project! It's a time machine built with JavaScript.",
           },
         },
         documents: {
           "resume.pdf": {
             type: "file",
             content:
-              "Harsh Yadav's professional resume (PDF format)\nEmail: harshdana1@gmail.com \nSkills:\n- Frameworks: React, NextJs, Express, Nodejs\n- Other Technologies: WebSockets, Redis, Stripe, Tanstack Query, React Hook Form, Auth0, Redux Toolkit\n- Databases: PostgreSQL, SQL, MongoDB\n- Development Tools: VSCode, Git, GitHub, Docker",
+              "Harsh Yadav resume (PDF format)\nEmail: harshdana1@gmail.com \nSkills:\n- Frameworks: React, NextJs, Express, Nodejs\n- Other Technologies: WebSockets, Redis, Stripe, Tanstack Query, React Hook Form, Auth0, Redux Toolkit\n- Databases: PostgreSQL, SQL, MongoDB\n- Development Tools: VSCode, Git, GitHub, Docker",
           },
           "blog-ideas.txt": {
             type: "file",
             content:
               "1. Mastering React Hooks\n2. Building Scalable Node.js Applications\n3. CSS Grid vs Flexbox\n4. TypeScript Best Practices",
-          },
-          ".hidden-diary": {
-            type: "file",
-            content:
-              "Dear Diary, today I finally understood how to center a div. It was a good day.",
           },
         },
         "skills.txt": {
@@ -66,7 +61,7 @@ export const fileSystem = {
         "welcome.txt": {
           type: "file",
           content:
-            "Welcome to HarshOS! Feel free to explore the file system using commands like 'ls', 'cd', and 'cat'.",
+            "Welcome to HarshOS! Explore the file system using commands like 'ls', 'cd', and 'cat'.",
         },
       },
     },
@@ -87,7 +82,7 @@ export const fileSystem = {
         "custom-script.sh": {
           type: "file",
           content:
-            '#!/bin/bash\necho "This is a custom script"\n# todo: add custom-script',
+            '#!/bin/bash\necho "This is a custom script"\n# TODO: add custom-script',
         },
       },
       lib: {
@@ -104,11 +99,6 @@ export const fileSystem = {
           type: "file",
           content:
             "2023-05-15 10:30:15 - System started\n2023-05-15 10:30:16 - Initializing services\n2023-05-15 10:30:18 - All services running",
-        },
-        ".hidden-log": {
-          type: "file",
-          content:
-            "2023-05-15 03:14:15 - 🍕 Late night coding session started\n2023-05-15 07:30:00 - 💤 Fell asleep on keyboard. Commit message: 'asdfghjkl'",
         },
       },
     },
