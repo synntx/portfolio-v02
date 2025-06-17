@@ -5,6 +5,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import Footer from "@/components/Footer";
 import Tooltip from "@/components/ui/Tooltip";
 import Image from "next/image";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -66,6 +67,7 @@ export default function Home() {
         </div>
       </div>
       <Terminal />
+      <Experience />
       <Projects />
       <div className="w-full max-w-full self-center">
         <Footer />

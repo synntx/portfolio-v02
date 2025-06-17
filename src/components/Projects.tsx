@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div className="w-full max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
       <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-semibold text-foreground my-4 md:mb-6">
+        <h2 className="text-3xl font-semibold text-foreground/90 my-4 md:mb-6">
           Projects
         </h2>
         <div>
@@ -20,8 +20,8 @@ const Projects = () => {
           </Link>
         </div>
       </div>
-      <div className="border-b border-border/40" />
-      <div className="grid grid-cols-1 md:grid-cols-1">
+      <div className="border-b border-dashed border-border/40" />
+      <div className="grid grid-cols-1 md:grid-cols-1 ">
         {projectsData.slice(0, 2).map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
