@@ -22,6 +22,7 @@ const config: Config = {
       },
       fontFamily: {
         allura: ["var(--font-allura)", "cursive", "sans-serif"],
+        ibmPlexMono: ["var(--font-ibm-plex-mono)", "monospace", "sans-serif"],
       },
     },
   },

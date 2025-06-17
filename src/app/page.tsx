@@ -4,13 +4,14 @@ import Terminal from "@/components/Terminal";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import Footer from "@/components/Footer";
 import Tooltip from "@/components/ui/Tooltip";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-start justify-start min-h-screen">
       <header className="w-full flex justify-between items-center max-w-4xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <h1 className="font-allura flex gap-3 items-center justify-center text-xl">
-          <img
+          <Image
             src="/logo.png"
             alt="Harsh's logo"
             width={40}
@@ -34,15 +35,16 @@ export default function Home() {
         </div>
         <div className="space-y-4">
           <p className="text-lg text-foreground/80 leading-relaxed">
-            Hi! I&apos;m Harsh, a software developer from India with a passion
-            for tech. I specialize in building websites using
+            Hi! I&apos;m Harsh, a software engineer from India with a passion
+            for tech. I mostly work with
             <span className="font-semibold">
               {" "}
-              JavaScript, TypeScript, React, Next.js, and Node.js
-            </span>
-            . I&apos;m always excited to learn and grow in the fast-paced world
-            of software development. Currently learning Rust to get better at
-            low-level programming.
+              TypeScript, React, Next.js, and Node.js
+            </span>{" "}
+            for web development, and I&apos;ve been exploring
+            <span className="font-semibold"> Go</span> for backend projects.
+            I&apos;m always excited to learning something new. Currently diving
+            into Rust to understand systems programming better.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed">
             If you&apos;d like to connect, feel free to reach out on{" "}
@@ -54,10 +56,10 @@ export default function Home() {
             </Link>{" "}
             or drop me an email at{" "}
             <Link
-              href="mailto:harshdana1@gmail.com"
+              href="mailto:harshdana@protonmail.com"
               className="text-accent hover:text-green-500 tracking-wide transition-colors duration-200 ease-in-out"
             >
-              harshdana1@gmail.com
+              harshdana@protonmail.com
             </Link>
             . I&apos;d love to hear from you!
           </p>

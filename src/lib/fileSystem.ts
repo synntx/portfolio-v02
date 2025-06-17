@@ -33,7 +33,7 @@ export const fileSystem = {
           "resume.pdf": {
             type: "file",
             content:
-              "Harsh Yadav resume (PDF format)\nEmail: harshdana1@gmail.com \nSkills:\n- Frameworks: React, NextJs, Express, Nodejs\n- Other Technologies: WebSockets, Redis, Stripe, Tanstack Query, React Hook Form, Auth0, Redux Toolkit\n- Databases: PostgreSQL, SQL, MongoDB\n- Development Tools: VSCode, Git, GitHub, Docker",
+              "Harsh Yadav resume (PDF format)\nEmail: harshdana@protonmail.com \nSkills:\n- Frameworks: React, NextJs, Express, Nodejs\n- Other Technologies: WebSockets, Redis, Stripe, Tanstack Query, React Hook Form, Auth0, Redux Toolkit\n- Databases: PostgreSQL, SQL, MongoDB\n- Development Tools: VSCode, Git, GitHub, Docker",
           },
           "blog-ideas.txt": {
             type: "file",
@@ -49,7 +49,7 @@ export const fileSystem = {
         "contact.txt": {
           type: "file",
           content:
-            "Email: harshdana1@gmail.com\nLinkedIn: https://www.linkedin.com/in/harshdana/\nGitHub: https://github.com/harshyadavone/\nTwitter: @harshyadavone",
+            "Email: harshdana@protonmail.com\nLinkedIn: https://www.linkedin.com/in/harshdana/\nGitHub: https://github.com/synntx/\nTwitter: @harshyadavone",
         },
         "about-me.txt": {
           type: "file",

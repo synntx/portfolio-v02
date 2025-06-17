@@ -7,7 +7,7 @@ interface Project {
   description: string;
   technologies: string[];
   githubLink: string;
-  liveLink: string;
+  liveLink?: string;
 }
 
 const ProjectCard = ({ project }: { project: Project }) => {

@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import React, { useState, useRef, useEffect } from "react";
 import { FaFile, FaFolder, FaTerminal } from "react-icons/fa";
 import Tooltip from "./ui/Tooltip";
+import { facts, sudoResponses } from "@/lib/constants";
 
 const InteractiveTerminal: React.FC = () => {
   const [input, setInput] = useState("");
@@ -41,19 +42,16 @@ const InteractiveTerminal: React.FC = () => {
 
   const commands = {
     whoareyou: "Introduces the developer",
-    whoami: "Describes your role as an explorer in the HarshOS",
     cd: "Change directory. Usage: cd <directory>",
     ls: "List contents of the current directory",
     cat: "Display contents of a file. Usage: cat <filename>",
     clear: "Clear the terminal screen",
     hello: "Displays a fancy 'Hello World' message",
-    joke: "Tells a programming joke",
     time: "Displays the current time",
     sudo: "Attempts to use superuser privileges",
     fact: "Shares a random interesting fact",
-    fortune: "Provides a random fortune",
-    hack: "Simulates a hacking attempt (just for fun!)",
     help: "Displays this help message",
+    exit: "Exits the terminal",
   };
 
   const processCommand = (cmd: string): any => {
@@ -75,9 +73,7 @@ const InteractiveTerminal: React.FC = () => {
           </div>
         );
       case "whoareyou":
-        return "I'm Harsh, the developer behind this digital playground. Nice to meet you!";
-      case "whoami":
-        return "You're an explorer in the HarshOS universe. Your mission? To discover all the hidden gems!";
+        return "I'm Harsh, the developer behind this. Nice to meet you!";
       case "cd":
         return changeDirectory(args[0]);
       case "ls":
@@ -100,48 +96,22 @@ const InteractiveTerminal: React.FC = () => {
             `}
           </pre>
         );
-      case "joke":
-        return "How do you comfort a JavaScript bug? You console it!";
       case "time":
         const now = new Date();
-        return `Current time is: ${now.toLocaleTimeString()} - Make the most of your time!`;
+        return `Current time is: ${now.toLocaleTimeString()}`;
       case "sudo":
-        const sudo = [
-          "Nice try, but even sudo can't make you cool. That's all natural, baby! 😎",
-          "Just because you can, doesn't mean you should...",
-        ];
-        return sudo[Math.floor(Math.random() * sudo.length)];
+        return sudoResponses[Math.floor(Math.random() * sudoResponses.length)];
       case "fact":
-        const facts = [
-          "Honey never spoils.",
-          "A group of flamingos is called a 'flamboyance'.",
-          "Octopuses have three hearts.",
-          "Bananas are berries, but strawberries aren't.",
-          "The first computer bug was an actual real-life bug. A moth, to be precise!",
-          "The programming language Python isn't named after a snake, but after Monty Python!",
-          "The first computer mouse was made of wood!",
-          "The world's first computer programmer was a woman named Ada Lovelace.",
-          "The first electronic computer ENIAC weighed more than 27 tons!",
-        ];
-        return facts[Math.floor(Math.random() * facts.length)];
-      case "fortune":
-        const fortunes = [
-          "You will debug a major issue with a single console.log().",
-          "A great open-source contribution is in your future.",
-          "Your next side project will go viral. Choose wisely!",
-          "You will finally understand that one Stack Overflow answer.",
-          "Your code will work on the first try. Yes, really!",
-        ];
-        return fortunes[Math.floor(Math.random() * fortunes.length)];
-      case "hack":
-        return "Accessing secure server...\nBypassing firewall...\nDownloading confidential files...\nJust kidding! 😂";
+        return `${facts[Math.floor(Math.random() * facts.length)]}`;
+      case "exit":
+        return router.push("/");
       default:
         return "Command not found. Type 'help' for a list of available commands.";
     }
   };
 
   const getDirectoryContent = (
-    path: string
+    path: string,
   ): { content: any; isDirectory: boolean } | null => {
     const parts = path.split("/").filter(Boolean);
     let current: any = fileSystem["/"];
@@ -299,7 +269,7 @@ const InteractiveTerminal: React.FC = () => {
         </div>
       </div>
       <div
-        className="p-4 h-96 overflow-y-auto font-mono text-sm text-green-400 scrollbar-terminal"
+        className="p-4 h-96 overflow-y-auto font-ibmPlexMono text-sm text-green-400 scrollbar-terminal"
         ref={outputRef}
         onClick={handleTerminalClick}
       >

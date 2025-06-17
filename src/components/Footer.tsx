@@ -1,13 +1,7 @@
 import Link from "next/link";
-import {
-  DiscordIcon,
-  GithubIcon,
-  InstagramIcon,
-  Linkedin02Icon,
-  NewTwitterIcon,
-} from "./Icon";
-import Tooltip from "./ui/Tooltip";
-import { SiBuymeacoffee } from "react-icons/si";
+import { GithubIcon, Linkedin02Icon, NewTwitterIcon } from "./Icon";
+// import Tooltip from "./ui/Tooltip";
+// import { SiBuymeacoffee } from "react-icons/si";
 
 const Footer = () => {
   return (
@@ -16,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-row items-center justify-between mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="flex gap-2 items-center justify-center">
             <Link
-              href="https://github.com/harshyadavone"
+              href="https://github.com/synntx"
               target="_blank"
               rel="noreferrer"
               className="bg-card p-2 rounded-lg transistion-all duration-200 hover:scale-[0.95] active:scale-[0.92]"
@@ -32,30 +26,12 @@ const Footer = () => {
               <NewTwitterIcon className="text-foreground h-5 w-5" />
             </Link>
             <Link
-              href="https://instagram.com/harshyadavone"
-              target="_blank"
-              rel="noreferrer"
-              className="bg-card p-2 rounded-lg transistion-all duration-200 hover:scale-[0.95] active:scale-[0.92]"
-            >
-              <InstagramIcon className="text-foreground h-5 w-5" />
-            </Link>
-            <Link
               href="https://www.linkedin.com/in/harshdana"
               target="_blank"
               rel="noreferrer"
               className="bg-card p-2 rounded-lg transistion-all duration-200 hover:scale-[0.95] active:scale-[0.92]"
             >
               <Linkedin02Icon className="text-foreground h-5 w-5" />
-            </Link>
-            <Link
-              href="https://discord.com/users/889586166221926430"
-              target="_blank"
-              rel="noreferrer"
-              className="bg-card p-2 rounded-lg transistion-all duration-200 hover:scale-[0.95] active:scale-[0.92] mt-0.5"
-            >
-              <Tooltip content="@harsh_one" position="top" delay={30}>
-                <DiscordIcon className="text-foreground h-5 w-5" />
-              </Tooltip>
             </Link>
           </div>
           <div className="flex gap-3 items-center justify-center">
