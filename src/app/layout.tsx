@@ -16,7 +16,7 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Harsh's Portfolio | Full Stack Engineer & Designer",
   description:
-    "Hi! I'm Harsh, a software developer from India with a passion for tech. I specialize in building websites using TypeScript, Next.js, React.js and Node.js",
+    "Software engineer working with TypeScript and React. Building web applications and learning systems programming.",
   keywords: [
     "web developer",
     "portfolio",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Harsh's Portfolio | Full Stack Engineer & Designer",
     description:
-      "Hi! I'm Harsh, a software developer from India with a passion for tech. I specialize in building websites using TypeScript, Next.js, React.js and Node.js",
+      "Software engineer working with TypeScript and React. Building web applications and learning systems programming.",
     type: "website",
     url: "https://harshyadavone.vercel.app",
     images: [
@@ -109,7 +109,7 @@ export default function RootLayout({
                 "https://harshdana.vercel.app/",
               ],
               description:
-                "Hi! I'm Harsh, a software developer from India with a passion for tech. I specialize in building websites using TypeScript, Next.js, React.js and Node.js",
+                "Software engineer working with TypeScript and React. Building web applications and learning systems programming",
             }),
           }}
         />
