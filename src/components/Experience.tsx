@@ -1,8 +1,23 @@
 const experiences = [
+   {
+    role: "Founding Engineer",
+    company: "LibraAI",
+    period: "Jul 2025 – Present",
+    description:
+      "Developing an AI-powered WorkOS that unifies enterprise applications like Google Drive, Slack, and Notion into a single source of truth. Responsible for building out core application functionality, integrating third-party APIs, and engineering a high-performance file search feature with Node.js and Typesense to provide users with instant, intelligent answers.",
+    technologies: [
+      "React (Vite)",
+      "Node.js",
+      "PostgreSQL",
+      "Redis",
+      "Golang",
+      "Typesense",
+    ],
+  },
   {
     role: "Software Engineer Intern",
     company: "LibraAI",
-    period: "Apr 2025 – Present",
+    period: "Apr 2025 – Jul 2025",
     description:
       "Developing an AI-powered WorkOS that unifies enterprise applications like Google Drive, Slack, and Notion into a single source of truth. Responsible for building out core application functionality, integrating third-party APIs, and engineering a high-performance file search feature with Node.js and Typesense to provide users with instant, intelligent answers.",
     technologies: [
