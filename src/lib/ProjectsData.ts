@@ -36,7 +36,7 @@ const projectsData = [
     title: "Zync - Video Streaming PWA",
     author: "synntx",
     liveLink: "https://zync-v1.onrender.com/",
-    githubLink: "https://github.com/synntx/ZYNC-video-streaming-pwa-fronend",
+    githubLink: "https://github.com/synntx/zync-frontend",
     description:
       "A progressive web app for video streaming with an advanced, infinitely scalable nested comment system and robust search functionality.",
 
