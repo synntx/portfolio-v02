@@ -20,6 +20,7 @@ const projectsData = [
     title: "Askmind",
     author: "synntx",
     githubLink: "https://github.com/synntx/askmind",
+    liveLink: "https://askmind.in/",
     description:
       "AI chat bot that uses multiple LLM providers and tools/agents to provide relevant information",
     technologies: ["Nextjs", "Typescript", "Golang", "Tanstack-query"],
