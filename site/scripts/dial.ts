@@ -1,10 +1,19 @@
-import { flickLanding } from "./flick";
 import type { DialMark } from "./timeline";
 
 const ARC = { radius: 300, edge: 26, spacing: 16, inset: 14, labelGap: 8 };
 const MINOR_PARTS = [0.25, 0.5, 0.75];
 const WHEEL_NOTCH_PX = 100;
 const MOMENTUM_SAMPLE_MS = 100;
+const FLICK_CARRY_MS = 180;
+
+function flickLanding(
+  positionInMonths: number,
+  monthsPerMs: number,
+  lastMonth: number,
+): number {
+  const carried = positionInMonths + monthsPerMs * FLICK_CARRY_MS;
+  return Math.min(lastMonth, Math.max(0, Math.round(carried)));
+}
 
 export interface DialOptions {
   count: number;
