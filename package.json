@@ -8,8 +8,8 @@
     "dev": "go run ./cmd/build -serve :4321",
     "build": "go run ./cmd/build",
     "typecheck": "tsc",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format": "prettier --write site cmd internal *.json *.md",
+    "format:check": "prettier --check site cmd internal *.json *.md"
   },
   "devDependencies": {
     "prettier": "3.3.3",
