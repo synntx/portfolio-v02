@@ -15,8 +15,5 @@
     "prettier": "3.3.3",
     "typescript": "^5.6.3",
     "vercel": "64.5.0"
-  },
-  "dependencies": {
-    "@vercel/analytics": "2.0.1"
   }
 }

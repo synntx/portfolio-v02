@@ -1,22 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": null,
   "git": {
     "deploymentEnabled": false
-  },
-  "installCommand": "command -v go >/dev/null 2>&1 || dnf install -y golang",
-  "buildCommand": "go run ./cmd/build -analytics",
-  "outputDirectory": "dist",
-  "redirects": [
-    {
-      "source": "/terminal",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/projects",
-      "destination": "/",
-      "permanent": true
-    }
-  ]
+  }
 }

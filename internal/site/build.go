@@ -8,7 +8,6 @@ import (
 	"io/fs"
 	"os"
 	"path/filepath"
-	"strconv"
 )
 
 type Options struct {
@@ -32,7 +31,7 @@ func Build(siteDir, outDir string, options Options) error {
 	if err != nil {
 		return err
 	}
-	pageScript, err := bundleScript(filepath.Join(siteDir, "scripts", "main.ts"), map[string]string{"ANALYTICS": strconv.FormatBool(options.Analytics)})
+	pageScript, err := bundleScript(filepath.Join(siteDir, "scripts", "main.ts"), nil)
 	if err != nil {
 		return err
 	}

@@ -23,4 +23,4 @@ npm install && npm run typecheck  # type-check site/scripts
 
 ## Deploy
 
-Vercel runs `go run ./cmd/build -analytics` and serves `dist/` (see `vercel.json`). The `-analytics` flag adds Vercel Web Analytics and Google Analytics, loaded after the page.
+Every push to `main` runs `.github/workflows/deploy.yml`: it type-checks, runs the Go tests, builds `dist/` with `-analytics`, and uploads `dist/` to Vercel. `site/public/vercel.json` travels inside `dist/` and tells Vercel the files are already built, so Vercel's own build step only copies them. That step must run on Vercel, because Vercel Web Analytics does not work with `vercel deploy --prebuilt`. The root `vercel.json` turns off Vercel's own Git builds so each push deploys once. The workflow needs a `VERCEL_TOKEN` repository secret.

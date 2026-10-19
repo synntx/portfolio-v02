@@ -129,7 +129,7 @@ func TestBuildWritesThePage(t *testing.T) {
 			t.Errorf("%s must only be in deploy builds", analytics)
 		}
 	}
-	for _, file := range []string{"robots.txt", "sitemap.xml", "fonts/inter-latin.woff2", "portrait/avatar-day-56.png"} {
+	for _, file := range []string{"robots.txt", "sitemap.xml", "vercel.json", "fonts/inter-latin.woff2", "portrait/avatar-day-56.png"} {
 		if _, err := os.Stat(filepath.Join(out, file)); err != nil {
 			t.Errorf("%s was not written: %v", file, err)
 		}
