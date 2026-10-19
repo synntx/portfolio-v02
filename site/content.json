@@ -1,0 +1,141 @@
+{
+  "site": {
+    "url": "https://www.synntx.com",
+    "title": "Harsh Yadav",
+    "description": "Founding engineer at Libra AI.",
+    "image": {
+      "path": "og-image.png",
+      "width": 2400,
+      "height": 1260,
+      "alt": "Harsh Yadav, founding engineer at Libra AI"
+    },
+    "googleVerification": "twhv-FtvhTmMu8DrAZbHTaCKsoXamB_xxt-KjZVGEFU",
+    "googleTagId": "G-F7FRJKW5QH"
+  },
+  "headline": {
+    "name": "Harsh Yadav",
+    "role": "Founding engineer at"
+  },
+  "email": "harshdana@protonmail.com",
+  "emailButton": "Email me",
+  "copyEmail": "Copy email address",
+  "copied": "Copied",
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/synntx"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/harshdana"
+    },
+    {
+      "label": "X",
+      "url": "https://twitter.com/harshyadavone"
+    }
+  ],
+  "workLabel": "Work",
+  "jobs": [
+    {
+      "id": "libra-ai",
+      "company": "Libra AI",
+      "url": "https://trylibra.ai",
+      "mark": "libraai",
+      "role": "Founding engineer",
+      "when": "Since 2025",
+      "current": true,
+      "joined": "2025-04-10",
+      "chapters": [
+        {
+          "title": "The first version",
+          "start": "2025-04",
+          "note": "Joined as an intern, founding engineer from July",
+          "lines": [
+            "Built most of the web app's first version: chat, mentions, file previews, onboarding.",
+            "Rebuilt search so keyword and vector results run together and merge.",
+            "Built the BI assistant: chat over a team's data, with agents that write and fix SQL.",
+            "Let people undo the agent's edits in Notion, Linear and Google Sheets.",
+            "Built sub-agents that split a big request and work the parts in parallel."
+          ]
+        },
+        {
+          "title": "The agent loop",
+          "start": "2025-10",
+          "lines": [
+            "Wrote the agent loop that became Libra's default chat.",
+            "Built approvals, so the agent asks before it changes anything in a team's connected apps.",
+            "Made chat answers keep streaming after you reload the page.",
+            "Built slide generation and editing, with PowerPoint and PDF export.",
+            "Cut the agent's token use with shorter tool results, summaries and prompt caching."
+          ]
+        },
+        {
+          "title": "The desktop app",
+          "start": "2026-03",
+          "lines": [
+            "Started the macOS desktop app and ran its releases.",
+            "Built a Spotlight-style assistant and push-to-talk dictation for the Mac app.",
+            "Made the Mac app record both sides of a meeting: your mic and the call's audio."
+          ]
+        },
+        {
+          "title": "Custom agents",
+          "start": "2026-05",
+          "lines": [
+            "Built custom agents: describe one in chat, run it on a schedule or event, or group agents into a team.",
+            "Rebuilt the agent's tools for GitHub, Slack, Linear, Notion, Asana and Calendar.",
+            "Made approvals durable: the agent pauses for a yes and picks up when it comes."
+          ]
+        },
+        {
+          "title": "Agent core",
+          "start": "2026-08",
+          "lines": [
+            "Rewrote the agent as one core that every chat runs on, whatever the model.",
+            "Let the agent use a browser and real Mac apps from the desktop app.",
+            "Wrote stress evals: 115 tasks against a simulated 3,500-person company, then fixed what broke."
+          ]
+        },
+        {
+          "title": "Libra anywhere",
+          "start": "2026-10",
+          "lines": [
+            "Rebuilt self-hosting so a team can run Libra on its own server, with signed updates.",
+            "Built Libra's native iOS app in SwiftUI: chat, tasks and meeting recording.",
+            "Built Libra's MCP server, so Claude and ChatGPT can search a team's Libra.",
+            "Gave custom agents spend limits and approvals, so a run stops or asks before writing."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tracks-and-towers",
+      "company": "Tracks & Towers",
+      "url": "https://tracksandtowers.com",
+      "logo": "logos/tracks-and-towers.png",
+      "role": "Full stack intern",
+      "when": "Feb to Apr 2025",
+      "chapters": []
+    }
+  ],
+  "panel": {
+    "close": "Close",
+    "chapters": "Chapters",
+    "month": "Month",
+    "previous": "Previous job",
+    "next": "Next job",
+    "empty": "Notes on this one are on their way.",
+    "position": "{n} of {total}"
+  },
+  "sunControl": {
+    "hint": "Drag the sun to see this page at another time of day",
+    "pin": "Pin this time",
+    "unpin": "Unpin and go back to now"
+  },
+  "place": {
+    "name": "India",
+    "latitude": 23.5,
+    "longitude": 80,
+    "utcOffsetMinutes": 330
+  }
+}

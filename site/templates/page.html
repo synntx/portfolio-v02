@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff" id="theme-color">
+<title>{{.Site.Title}}</title>
+<meta name="description" content="{{.Site.Description}}">
+<link rel="canonical" href="{{.PageURL}}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{.PageURL}}">
+<meta property="og:title" content="{{.Site.Title}}">
+<meta property="og:description" content="{{.Site.Description}}">
+<meta property="og:image" content="{{.ImageURL}}">
+<meta property="og:image:width" content="{{.Site.Image.Width}}">
+<meta property="og:image:height" content="{{.Site.Image.Height}}">
+<meta property="og:image:alt" content="{{.Site.Image.Alt}}">
+<meta name="twitter:card" content="summary_large_image">
+{{- with .Site.GoogleVerification}}
+<meta name="google-site-verification" content="{{.}}">
+{{- end}}
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>{{.CSS}}</style>
+<script>{{.HeadScript}}</script>
+<script type="application/ld+json">{{.JSONLD}}</script>
+</head>
+<body>
+<canvas class="sunlight" id="sunlight" aria-hidden="true"></canvas>
+<main class="home">
+  <section class="hero">
+    <span class="avatar">
+      <img class="for-day" src="/portrait/avatar-day-56.png" srcset="/portrait/avatar-day-112.png 2x, /portrait/avatar-day-168.png 3x" width="56" height="56" alt="">
+      <img class="for-night" src="/portrait/avatar-night-56.png" srcset="/portrait/avatar-night-112.png 2x, /portrait/avatar-night-168.png 3x" width="56" height="56" alt="">
+    </span>
+    <h1 class="statement">{{.Headline.Name}}<span class="statement-role">{{.Headline.Role}} <a class="squiggle" href="{{.CurrentJob.URL}}" target="_blank" rel="noreferrer">{{.CurrentJob.Company}}</a></span></h1>
+    <nav class="actions" aria-label="Contact and elsewhere">
+      <span class="button-primary button-split">
+        <a href="mailto:{{.Email}}" data-tip="{{.Email}}">{{.EmailButton}}</a>
+        <button class="copy-email" id="copy-email" type="button" aria-label="{{.CopyEmail}}" data-tip="{{.Copied}}" data-email="{{.Email}}"><span class="icon-copy">{{template "icon-copy"}}</span><span class="icon-check">{{template "icon-check"}}</span></button>
+      </span>
+      {{- range .Links}}<a class="link" href="{{.URL}}" target="_blank" rel="noreferrer">{{.Label}}</a>{{end}}
+    </nav>
+  </section>
+
+  <section class="work">
+    <section aria-labelledby="work-label">
+      <h2 class="section-label" id="work-label">{{.WorkLabel}}</h2>
+      <ul class="job-list">
+        {{- range .Jobs}}
+        <li><button class="job-row{{if not .Current}} is-past{{end}}" type="button" data-job="{{.ID}}" aria-haspopup="dialog" aria-controls="job-panel">
+          <span class="job-logo">{{template "logo" .}}</span>
+          <span class="job-text">
+            <span class="squiggle job-company">{{.Company}}</span>
+            <span class="job-meta">{{.Role}}<span class="job-when">{{.When}}</span></span>
+          </span>
+        </button></li>
+        {{- end}}
+      </ul>
+    </section>
+  </section>
+
+  <footer class="foot">
+    <div class="sun-control">
+      <div class="sun-slider" id="sun-slider" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="1439" aria-label="{{.SunControl.Hint}}" title="{{.SunControl.Hint}}">
+        <svg width="40" height="18" viewBox="0 0 40 18" aria-hidden="true">
+          <line class="horizon" x1="0" y1="13" x2="40" y2="13"/>
+          <path class="arc" id="sun-arc" d=""/>
+          <circle class="sun" id="sun-dot" r="3" cx="20" cy="13"/>
+        </svg>
+        <span id="sun-text"></span>
+      </div>
+      <button class="pin" id="pin" type="button" aria-pressed="false" aria-label="{{.SunControl.Pin}}" title="{{.SunControl.Pin}}" data-pin-label="{{.SunControl.Pin}}" data-unpin-label="{{.SunControl.Unpin}}">{{template "icon-pin"}}</button>
+    </div>
+  </footer>
+</main>
+
+<dialog class="panel" id="job-panel" aria-labelledby="panel-title"></dialog>
+{{- range .Panels}}
+<template data-panel="{{.ID}}">{{template "panel" .}}</template>
+{{- end}}
+
+<p class="visually-hidden" id="copy-status" aria-live="polite"></p>
+<script>{{.PageScript}}</script>
+{{- if .Analytics}}
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+{{- with .Site.GoogleTagID}}
+<script>
+addEventListener("load", function () {
+  var id = {{.}};
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", id);
+  var script = document.createElement("script");
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+  document.head.append(script);
+});
+</script>
+{{- end}}
+{{- end}}
+</body>
+</html>

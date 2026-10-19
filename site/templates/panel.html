@@ -1,0 +1,49 @@
+{{define "panel"}}<div class="panel-body" tabindex="-1" autofocus>
+  <header class="panel-head">
+    <span class="job-logo">{{template "logo" .Job}}</span>
+    <div>
+      <h2 class="panel-title" id="panel-title">{{.Company}}</h2>
+      <p class="panel-meta">{{.Role}}<span class="job-when"{{if .Current}} data-joined="{{.Joined}}"{{end}}>{{.When}}</span></p>
+    </div>
+    <button class="panel-close" type="button" aria-label="{{.Text.Close}}">{{template "icon-close"}}</button>
+  </header>
+  {{- if .ChapterViews}}
+  <div class="fold" data-current="{{.Current}}"{{with .Ended}} data-ended="{{.}}"{{end}}>
+    <div class="dial" tabindex="0" role="slider" aria-label="{{.Text.Month}}" aria-orientation="vertical"></div>
+    <div class="fold-list">
+      <span class="fold-pill" aria-hidden="true"></span>
+      <div class="fold-items" role="tablist" aria-orientation="vertical" aria-label="{{.Text.Chapters}}">
+        {{- range .ChapterViews}}
+        <button class="fold-item" type="button" role="tab" id="chapter-tab-{{.Index}}" aria-controls="chapter-{{.Index}}" data-index="{{.Index}}" data-start="{{.Start}}">{{.Title}}{{if .ShowSun}}<i class="sun-dot" aria-hidden="true"></i>{{end}}</button>
+        {{- end}}
+      </div>
+    </div>
+    <div class="fold-card"><div class="fold-stage">
+      {{- range .ChapterViews}}
+      <section role="tabpanel" id="chapter-{{.Index}}" aria-labelledby="chapter-tab-{{.Index}}">
+        {{- with .Note}}<p class="fold-note">{{.}}</p>{{end}}
+        <ul class="fold-lines">{{range .Lines}}<li>{{.}}</li>{{end}}</ul>
+      </section>
+      {{- end}}
+    </div></div>
+  </div>
+  {{- else}}
+  <div class="fold is-empty"><div class="fold-card"><p class="fold-empty">{{.Text.Empty}}</p></div></div>
+  {{- end}}
+  <footer class="panel-foot">
+    <a class="panel-visit" href="{{.URL}}" target="_blank" rel="noreferrer">{{.Host}}{{template "icon-arrow-out"}}</a>
+    <span class="panel-pager">
+      <span class="pager-position">{{.Position}}</span>
+      {{with .Previous -}}
+      <button class="pager-button is-previous" type="button" data-go="{{.ID}}" aria-label="{{$.Text.Previous}}: {{.Company}}">{{template "icon-chevron-left"}}<span class="mini-logo">{{template "logo" .}}</span></button>
+      {{- else -}}
+      <button class="pager-button" type="button" disabled aria-label="{{.Text.Previous}}">{{template "icon-chevron-left"}}</button>
+      {{- end}}
+      {{with .Next -}}
+      <button class="pager-button is-next" type="button" data-go="{{.ID}}" aria-label="{{$.Text.Next}}: {{.Company}}"><span class="mini-logo">{{template "logo" .}}</span>{{template "icon-chevron-right"}}</button>
+      {{- else -}}
+      <button class="pager-button" type="button" disabled aria-label="{{.Text.Next}}">{{template "icon-chevron-right"}}</button>
+      {{- end}}
+    </span>
+  </footer>
+</div>{{end}}
