@@ -4,9 +4,16 @@
   "installCommand": "command -v go >/dev/null 2>&1 || dnf install -y golang",
   "buildCommand": "go run ./cmd/build -analytics",
   "outputDirectory": "dist",
-  "cleanUrls": true,
   "redirects": [
-    { "source": "/terminal", "destination": "/", "permanent": true },
-    { "source": "/projects", "destination": "/", "permanent": true }
+    {
+      "source": "/terminal",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/projects",
+      "destination": "/",
+      "permanent": true
+    }
   ]
 }
