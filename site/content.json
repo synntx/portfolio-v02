@@ -20,6 +20,7 @@
   "emailButton": "Email me",
   "copyEmail": "Copy email address",
   "copied": "Copied",
+  "actionsLabel": "Contact and elsewhere",
   "links": [
     {
       "label": "GitHub",

@@ -36,7 +36,7 @@
       <img class="for-night" src="/portrait/avatar-night-56.png" srcset="/portrait/avatar-night-112.png 2x, /portrait/avatar-night-168.png 3x" width="56" height="56" alt="">
     </span>
     <h1 class="statement">{{.Headline.Name}}<span class="statement-role">{{.Headline.Role}} <a class="squiggle" href="{{.CurrentJob.URL}}" target="_blank" rel="noreferrer">{{.CurrentJob.Company}}</a></span></h1>
-    <nav class="actions" aria-label="Contact and elsewhere">
+    <nav class="actions" aria-label="{{.ActionsLabel}}">
       <span class="button-primary button-split">
         <a href="mailto:{{.Email}}" data-tip="{{.Email}}">{{.EmailButton}}</a>
         <button class="copy-email" id="copy-email" type="button" aria-label="{{.CopyEmail}}" data-tip="{{.Copied}}" data-email="{{.Email}}"><span class="icon-copy">{{template "icon-copy"}}</span><span class="icon-check">{{template "icon-check"}}</span></button>

@@ -12,18 +12,19 @@ import (
 )
 
 type Content struct {
-	Site        Meta       `json:"site"`
-	Headline    Headline   `json:"headline"`
-	Email       string     `json:"email"`
-	EmailButton string     `json:"emailButton"`
-	CopyEmail   string     `json:"copyEmail"`
-	Copied      string     `json:"copied"`
-	Links       []Link     `json:"links"`
-	WorkLabel   string     `json:"workLabel"`
-	Jobs        []Job      `json:"jobs"`
-	Panel       PanelText  `json:"panel"`
-	SunControl  SunControl `json:"sunControl"`
-	Place       Place      `json:"place"`
+	Site         Meta       `json:"site"`
+	Headline     Headline   `json:"headline"`
+	Email        string     `json:"email"`
+	EmailButton  string     `json:"emailButton"`
+	CopyEmail    string     `json:"copyEmail"`
+	Copied       string     `json:"copied"`
+	ActionsLabel string     `json:"actionsLabel"`
+	Links        []Link     `json:"links"`
+	WorkLabel    string     `json:"workLabel"`
+	Jobs         []Job      `json:"jobs"`
+	Panel        PanelText  `json:"panel"`
+	SunControl   SunControl `json:"sunControl"`
+	Place        Place      `json:"place"`
 }
 
 type Meta struct {
