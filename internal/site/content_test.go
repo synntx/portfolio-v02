@@ -124,12 +124,30 @@ func TestBuildWritesThePage(t *testing.T) {
 			t.Errorf("index.html is missing %q", want)
 		}
 	}
-	if strings.Contains(string(page), "googletagmanager") {
-		t.Error("analytics must only be added to deploy builds")
+	for _, analytics := range []string{"googletagmanager", "_vercel/insights"} {
+		if strings.Contains(string(page), analytics) {
+			t.Errorf("%s must only be in deploy builds", analytics)
+		}
 	}
 	for _, file := range []string{"robots.txt", "sitemap.xml", "fonts/inter-latin.woff2", "portrait/avatar-day-56.png"} {
 		if _, err := os.Stat(filepath.Join(out, file)); err != nil {
 			t.Errorf("%s was not written: %v", file, err)
+		}
+	}
+}
+
+func TestDeployBuildLoadsAnalytics(t *testing.T) {
+	out := t.TempDir()
+	if err := Build("../../site", out, Options{Analytics: true}); err != nil {
+		t.Fatal(err)
+	}
+	page, err := os.ReadFile(filepath.Join(out, "index.html"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, want := range []string{"_vercel/insights/script.js", "googletagmanager.com/gtag/js"} {
+		if !strings.Contains(string(page), want) {
+			t.Errorf("deploy build is missing %q", want)
 		}
 	}
 }
